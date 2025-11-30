@@ -24,7 +24,9 @@ namespace MySCADA
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form_Meter_devices());
             Application.Run(new Form1());
+            
         }
     }
 }

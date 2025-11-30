@@ -38,6 +38,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EasyModbus, Version=5.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\EasyModbusTCP.5.6.0\lib\net40\EasyModbus.dll</HintPath>
+    </Reference>
     <Reference Include="ExCSS, Version=4.2.3.0, Culture=neutral, PublicKeyToken=bdbe16be9b936b9a, processorArchitecture=MSIL">
       <HintPath>packages\ExCSS.4.2.3\lib\netstandard2.0\ExCSS.dll</HintPath>
     </Reference>
@@ -104,6 +107,12 @@
     <Compile Include="General_Info.cs" />
     <Compile Include="IpHistoryManager.cs" />
     <Compile Include="Meter_device.cs" />
+    <Compile Include="Form_Meter_devices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Meter_devices.Designer.cs">
+      <DependentUpon>Form_Meter_devices.cs</DependentUpon>
+    </Compile>
     <Compile Include="Motor.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -126,6 +135,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Meter_devices.resx">
+      <DependentUpon>Form_Meter_devices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Motor_Faceplate.resx">
       <DependentUpon>Motor_Faceplate.cs</DependentUpon>

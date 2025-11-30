@@ -1,10 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\MySCADA_new\\",
+  "WorkspaceRootPath": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{151AEB76-4B42-4191-AF6E-38FBA9C347AF}|MySCADA.csproj|d:\\self-development\\studying\\hk-251\\scada\\c#_project\\myscada_new\\meter_device.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{151AEB76-4B42-4191-AF6E-38FBA9C347AF}|MySCADA.csproj|d:\\self-development\\studying\\hk-251\\scada\\c#_project\\repo\\scada\\myscada_new\\form_meter_devices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{151AEB76-4B42-4191-AF6E-38FBA9C347AF}|MySCADA.csproj|solutionrelative:form_meter_devices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{151AEB76-4B42-4191-AF6E-38FBA9C347AF}|MySCADA.csproj|d:\\self-development\\studying\\hk-251\\scada\\c#_project\\repo\\scada\\myscada_new\\meter_device.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{151AEB76-4B42-4191-AF6E-38FBA9C347AF}|MySCADA.csproj|solutionrelative:meter_device.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{151AEB76-4B42-4191-AF6E-38FBA9C347AF}|MySCADA.csproj|d:\\self-development\\studying\\hk-251\\scada\\c#_project\\repo\\scada\\myscada_new\\form_meter_devices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{151AEB76-4B42-4191-AF6E-38FBA9C347AF}|MySCADA.csproj|solutionrelative:form_meter_devices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{151AEB76-4B42-4191-AF6E-38FBA9C347AF}|MySCADA.csproj|d:\\self-development\\studying\\hk-251\\scada\\c#_project\\repo\\scada\\myscada_new\\form_meter_devices.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{151AEB76-4B42-4191-AF6E-38FBA9C347AF}|MySCADA.csproj|solutionrelative:form_meter_devices.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,17 +26,55 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form_Meter_devices.Designer.cs",
+              "DocumentMoniker": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\Form_Meter_devices.Designer.cs",
+              "RelativeDocumentMoniker": "Form_Meter_devices.Designer.cs",
+              "ToolTip": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\Form_Meter_devices.Designer.cs",
+              "RelativeToolTip": "Form_Meter_devices.Designer.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAtwDYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T03:31:41.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Form_Meter_devices.cs",
+              "DocumentMoniker": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\Form_Meter_devices.cs",
+              "RelativeDocumentMoniker": "Form_Meter_devices.cs",
+              "ToolTip": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\Form_Meter_devices.cs",
+              "RelativeToolTip": "Form_Meter_devices.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAkwD8AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T03:16:32.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form_Meter_devices.cs [Design]",
+              "DocumentMoniker": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\Form_Meter_devices.cs",
+              "RelativeDocumentMoniker": "Form_Meter_devices.cs",
+              "ToolTip": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\Form_Meter_devices.cs [Design]",
+              "RelativeToolTip": "Form_Meter_devices.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T03:10:29.265Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Meter_device.cs",
-              "DocumentMoniker": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\MySCADA_new\\Meter_device.cs",
+              "DocumentMoniker": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\Meter_device.cs",
               "RelativeDocumentMoniker": "Meter_device.cs",
-              "ToolTip": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\MySCADA_new\\Meter_device.cs",
+              "ToolTip": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\Meter_device.cs",
               "RelativeToolTip": "Meter_device.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAswGcAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-29T11:05:20.336Z",
               "EditorCaption": ""
