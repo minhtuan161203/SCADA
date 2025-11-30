@@ -1,0 +1,154 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{151AEB76-4B42-4191-AF6E-38FBA9C347AF}|MySCADA.csproj|D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{151AEB76-4B42-4191-AF6E-38FBA9C347AF}|MySCADA.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{151AEB76-4B42-4191-AF6E-38FBA9C347AF}|MySCADA.csproj|D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\motor_faceplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{151AEB76-4B42-4191-AF6E-38FBA9C347AF}|MySCADA.csproj|solutionrelative:motor_faceplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{151AEB76-4B42-4191-AF6E-38FBA9C347AF}|MySCADA.csproj|D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{151AEB76-4B42-4191-AF6E-38FBA9C347AF}|MySCADA.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{151AEB76-4B42-4191-AF6E-38FBA9C347AF}|MySCADA.csproj|D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\plc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{151AEB76-4B42-4191-AF6E-38FBA9C347AF}|MySCADA.csproj|solutionrelative:plc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{151AEB76-4B42-4191-AF6E-38FBA9C347AF}|MySCADA.csproj|D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\motor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{151AEB76-4B42-4191-AF6E-38FBA9C347AF}|MySCADA.csproj|solutionrelative:motor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{151AEB76-4B42-4191-AF6E-38FBA9C347AF}|MySCADA.csproj|D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{151AEB76-4B42-4191-AF6E-38FBA9C347AF}|MySCADA.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{151AEB76-4B42-4191-AF6E-38FBA9C347AF}|MySCADA.csproj|D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\scada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{151AEB76-4B42-4191-AF6E-38FBA9C347AF}|MySCADA.csproj|solutionrelative:scada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{151AEB76-4B42-4191-AF6E-38FBA9C347AF}|MySCADA.csproj|d:\\self-development\\studying\\hk-251\\scada\\c#_project\\repo\\scada\\myscada_new\\motor_faceplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{151AEB76-4B42-4191-AF6E-38FBA9C347AF}|MySCADA.csproj|solutionrelative:motor_faceplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Motor_Faceplate.cs",
+              "DocumentMoniker": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\Motor_Faceplate.cs",
+              "RelativeDocumentMoniker": "Motor_Faceplate.cs",
+              "ToolTip": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\Motor_Faceplate.cs",
+              "RelativeToolTip": "Motor_Faceplate.cs",
+              "ViewState": "AgIAAEcBAAAAAAAAAAAowF8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T08:34:07.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\Form1.cs*",
+              "RelativeToolTip": "Form1.cs*",
+              "ViewState": "AgIAAPkAAAAAAAAAAAAUwP4AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T08:05:35.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Motor_Faceplate.cs [Design]",
+              "DocumentMoniker": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\Motor_Faceplate.cs",
+              "RelativeDocumentMoniker": "Motor_Faceplate.cs",
+              "ToolTip": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\Motor_Faceplate.cs [Design]",
+              "RelativeToolTip": "Motor_Faceplate.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T08:03:34.187Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\Form1.cs [Design]*",
+              "RelativeToolTip": "Form1.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T13:35:54.504Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SCADA.cs",
+              "DocumentMoniker": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\SCADA.cs",
+              "RelativeDocumentMoniker": "SCADA.cs",
+              "ToolTip": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\SCADA.cs",
+              "RelativeToolTip": "SCADA.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAYwB8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T08:03:19.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAiwCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T08:03:14.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PLC.cs",
+              "DocumentMoniker": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\PLC.cs",
+              "RelativeDocumentMoniker": "PLC.cs",
+              "ToolTip": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\PLC.cs",
+              "RelativeToolTip": "PLC.cs",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAkwJgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T08:03:13.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Motor.cs",
+              "DocumentMoniker": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\Motor.cs",
+              "RelativeDocumentMoniker": "Motor.cs",
+              "ToolTip": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\repo\\SCADA\\MySCADA_new\\Motor.cs",
+              "RelativeToolTip": "Motor.cs",
+              "ViewState": "AgIAAOgAAAAAAAAAAAAcwAEBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T13:35:49.179Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

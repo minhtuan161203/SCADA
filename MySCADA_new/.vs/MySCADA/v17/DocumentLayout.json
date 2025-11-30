@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\MySCADA_new\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{151AEB76-4B42-4191-AF6E-38FBA9C347AF}|MySCADA.csproj|d:\\self-development\\studying\\hk-251\\scada\\c#_project\\myscada_new\\meter_device.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{151AEB76-4B42-4191-AF6E-38FBA9C347AF}|MySCADA.csproj|solutionrelative:meter_device.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Meter_device.cs",
+              "DocumentMoniker": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\MySCADA_new\\Meter_device.cs",
+              "RelativeDocumentMoniker": "Meter_device.cs",
+              "ToolTip": "D:\\Self-Development\\Studying\\HK-251\\SCADA\\C#_Project\\MySCADA_new\\Meter_device.cs",
+              "RelativeToolTip": "Meter_device.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:05:20.336Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
