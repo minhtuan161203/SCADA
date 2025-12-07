@@ -56,16 +56,16 @@ public class MeterDevice
             // Đọc 24 thanh ghi (12 thông số x 2 thanh ghi)
             int[] rawData = _modbusClient.ReadInputRegisters(0, 24);
 
-            // Hàm chuyển đổi nội bộ
+            // Hàm chuyển đổi
             float GetFloat(int startIndex)
             {
-                // QUAY VỀ DÙNG HighLow NHƯ CŨ
+                // DÙNG HighLow
                 return ModbusClient.ConvertRegistersToFloat(
                     new int[] { rawData[startIndex], rawData[startIndex + 1] },
                     ModbusClient.RegisterOrder.HighLow);
             }
 
-            // Gán dữ liệu (Index nhảy cóc 2 đơn vị)
+            // Gán dữ liệu (Index 2 đơn vị)
             V = GetFloat(0);
             Vab = GetFloat(2);
             Vbc = GetFloat(4);
@@ -79,7 +79,7 @@ public class MeterDevice
             PF = GetFloat(20);
             E = GetFloat(22);
 
-            // 2. ĐỌC TRẠNG THÁI LOAD (Coils) - MỚI THÊM VÀO
+            // 2. ĐỌC TRẠNG THÁI LOAD (Coils)
             // Đọc 3 Coil bắt đầu từ địa chỉ 0 (tương ứng Load 1, 2, 3)
             bool[] coils = _modbusClient.ReadCoils(0, 3);
 

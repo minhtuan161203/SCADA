@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,68 +8,123 @@ namespace MySCADA
 {
     public partial class Form_Meter_devices : Form
     {
-        private MeterDevice meter1;
+        // Danh sách quản lý 15 đồng hồ
+        private List<MeterDevice> _meterList = new List<MeterDevice>();
+
         public Form_Meter_devices()
         {
-            InitializeComponent();
+            InitializeComponent(); // Hàm gọi code Designer
+
+            // 1. Khởi tạo kết nối và sự kiện
+            InitializeSystem();
+
+            // 2. Cấu hình Timer
+            tmrUpdate.Interval = 1000; // 1 giây quét 1 lần
+            tmrUpdate.Tick += TmrUpdate_Tick; // Gán hàm xử lý
+            tmrUpdate.Start();
         }
 
-        private void btnTest_Click(object sender, EventArgs e)
+        private void InitializeSystem()
         {
-            // Cấu hình cứng theo Simulator của bạn
-            string ip = "192.168.0.111";
-            int port = 502; // Port 502 là Meter 1, 503 là Meter 2...
+            // CẤU HÌNH KẾT NỐI
+            string ipSimulator = "192.168.0.111";
+            int startPort = 502;
 
-            Console.WriteLine($"\n--- BẮT ĐẦU TEST KẾT NỐI ĐẾN {ip}:{port} ---");
-
-            // 1. Khởi tạo
-            if (meter1 == null)
+            // Vòng lặp tạo 15 đồng hồ
+            for (int i = 0; i < 15; i++)
             {
-                meter1 = new MeterDevice(1, "Meter Test", ip, port);
-            }
+                int id = i + 1;
+                int port = startPort + i; // Port tăng dần: 502, 503...
 
-            // 2. Gọi hàm đọc
-            meter1.ReadData();
+                // Tạo đối tượng MeterDevice
+                MeterDevice newMeter = new MeterDevice(id, $"Meter #{id}", ipSimulator, port);
+                _meterList.Add(newMeter);
 
-            // 3. In kết quả ra Console
-            if (meter1.IsConnected)
-            {
-                Console.WriteLine(">>> KẾT QUẢ: THÀNH CÔNG");
-                Console.WriteLine($"Voltage: {meter1.V} V");
-                Console.WriteLine($"Current: {meter1.I} A");
-                Console.WriteLine($"Power:   {meter1.P} kW");
-                Console.WriteLine($"Load1:   {meter1.Load1Status} ");
-                Console.WriteLine($"Load2:   {meter1.Load2Status} ");
-                Console.WriteLine($"Load3:   {meter1.Load3Status} ");
-            }
-            else
-            {
-                Console.WriteLine(">>> KẾT QUẢ: THẤT BẠI");
-                Console.WriteLine($"Lỗi chi tiết: {meter1.StatusMessage}");
-            }
+                // --- TỰ ĐỘNG GÁN SỰ KIỆN CLICK CHO NÚT DETAIL ---
+                // Tìm nút có tên btnMeter1, btnMeter2...
+                string btnName = $"btnMeter{id}";
+                Control[] found = this.Controls.Find(btnName, true);
 
-            Console.WriteLine("------------------------------------------------");
+                if (found.Length > 0 && found[0] is Button btn)
+                {
+                    // Gán sự kiện: Khi nhấn nút -> Mở Faceplate
+                    // Dùng biến localMeter để tránh lỗi Closure trong vòng lặp
+                    MeterDevice localMeter = newMeter;
+                    btn.Click += (s, e) => OpenFaceplate(localMeter);
+                }
+            }
         }
 
-        private async void btnLoad_Click(object sender, EventArgs e)
+        // --- SỰ KIỆN TIMER: CẬP NHẬT GIAO DIỆN ---
+        private async void TmrUpdate_Tick(object sender, EventArgs e)
         {
-            // 1. Xác định trạng thái muốn set (Đảo ngược trạng thái hiện tại)
-            // Nếu Load1Status đang là true (Bật) -> targetState sẽ là false (Tắt) và ngược lại
-            bool targetState = !meter1.Load1Status;
+            // 1. Cập nhật đồng hồ thời gian thực
+            lbClock.Text = DateTime.Now.ToString("HH:mm:ss");
 
-            // 2. Gửi lệnh điều khiển xuống thiết bị
-            // Dùng Task.Run để chạy ngầm, không làm đơ giao diện khi chờ mạng
-            await Task.Run(() =>
+            // 2. Quét dữ liệu 15 đồng hồ
+            foreach (var meter in _meterList)
             {
-                // Tham số 1: Index của Load (1 tương ứng Load 1)
-                // Tham số 2: Trạng thái muốn set (true/false)
-                meter1.ControlLoad(1, targetState);
-            });
+                // Đọc dữ liệu (Chạy ngầm - Async)
+                await Task.Run(() => meter.ReadData());
 
-            // LƯU Ý: 
-            // Chúng ta KHÔNG đổi màu nút ở đây.
-            // Màu nút sẽ tự đổi khi Timer (tmrUpdate) đọc được trạng thái mới từ Simulator gửi về.
-            // Đây là nguyên tắc "Feedback" chuẩn trong SCADA.
+                int id = meter.Id;
+
+                // --- CẬP NHẬT LABEL VOLTAGE (lblVolt1...) ---
+                Control[] lblVolts = this.Controls.Find($"lblVolt{id}", true);
+                if (lblVolts.Length > 0)
+                {
+                    if (meter.IsConnected)
+                    {
+                        lblVolts[0].Text = $"{meter.V:F0} V";
+                        lblVolts[0].ForeColor = Color.DarkGreen;
+                    }
+                    else
+                    {
+                        lblVolts[0].Text = "---"; // Mất kết nối
+                        lblVolts[0].ForeColor = Color.Gray;
+                    }
+                }
+
+                // --- CẬP NHẬT LABEL POWER (lblPower1...) ---
+                Control[] lblPowers = this.Controls.Find($"lblPower{id}", true);
+                if (lblPowers.Length > 0)
+                {
+                    if (meter.IsConnected)
+                    {
+                        lblPowers[0].Text = $"{meter.P:F1} kW";
+                        lblPowers[0].ForeColor = Color.Red;
+                    }
+                    else
+                    {
+                        lblPowers[0].Text = "---";
+                    }
+                }
+            }
+        }
+
+        // --- HÀM MỞ FORM CHI TIẾT (FACEPLATE) ---
+        private void OpenFaceplate(MeterDevice meter)
+        {
+            // Kiểm tra xem Form của đồng hồ đã mở chưa?
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f is frmMeterFaceplate faceplate && faceplate.Text == meter.Name)
+                {
+                    faceplate.Focus();
+                    return;
+                }
+            }
+
+            // If not, open this
+            frmMeterFaceplate frm = new frmMeterFaceplate(meter);
+            frm.Show();
+        }
+
+        // Stop timer when close form
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            tmrUpdate.Stop();
+            base.OnFormClosing(e);
         }
     }
 }
