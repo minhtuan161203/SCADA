@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq; // Cần thêm cái này để tìm Form nhanh hơn
 using System.Windows.Forms;
 
 namespace MySCADA
@@ -8,59 +9,51 @@ namespace MySCADA
         public MainForm()
         {
             InitializeComponent();
-
-            // Căn giữa màn hình khi chạy cho đẹp
             this.StartPosition = FormStartPosition.CenterScreen;
 
-            // Gán sự kiện Click cho nút Motor
+            // Gán sự kiện
             btnMotorSystem.Click += BtnMotorSystem_Click;
-
-            // Gán sự kiện Click cho nút Meter
             btnMeterSystem.Click += BtnMeterSystem_Click;
+        }
+
+        // --- HÀM XỬ LÝ CHUNG: MỞ HOẶC FOCUS FORM ---
+        // Hàm này giúp tránh việc mở 10 cái cửa sổ giống nhau
+        private void OpenFormOfType<T>() where T : Form, new()
+        {
+            // 1. Tìm xem trong danh sách các Form đang mở, có cái nào kiểu T chưa?
+            T existingForm = Application.OpenForms.OfType<T>().FirstOrDefault();
+
+            if (existingForm != null)
+            {
+                // 2. Nếu ĐÃ MỞ rồi:
+                // Nếu đang bị minimize thì trả về bình thường
+                if (existingForm.WindowState == FormWindowState.Minimized)
+                {
+                    existingForm.WindowState = FormWindowState.Normal;
+                }
+                // Đưa nó lên trên cùng (Focus)
+                existingForm.Activate();
+            }
+            else
+            {
+                // 3. Nếu CHƯA MỞ: Tạo mới và Show
+                T newForm = new T();
+                newForm.Show(); // Dùng .Show() để mở song song
+            }
         }
 
         // --- XỬ LÝ NÚT MOTOR SYSTEM ---
         private void BtnMotorSystem_Click(object sender, EventArgs e)
         {
-            // Kiểm tra xem class Form_Motor_Device có tồn tại và đúng tên không
-            // (Dựa trên hình ảnh bạn gửi là Monitoring Pannel, tôi đoán tên class là Form_Motor_Device)
-            try
-            {
-                Form_Motor_Device motorForm = new Form_Motor_Device();
-
-                // Ẩn Form chính đi (tùy chọn, để nhìn cho gọn)
-                this.Hide();
-
-                // Hiện Form Motor lên. Dùng ShowDialog để khi tắt Form Motor mới quay lại đây được
-                motorForm.ShowDialog();
-
-                // Khi Form Motor tắt thì hiện lại Form chính
-                this.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi mở Form Motor: " + ex.Message);
-                this.Show();
-            }
+            // Gọi hàm mở thông minh cho Form Motor
+            OpenFormOfType<Form_Motor_Device>();
         }
 
         // --- XỬ LÝ NÚT METER SYSTEM ---
         private void BtnMeterSystem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                // Mở Form Meter (Form tổng 15 cái mà bạn vừa làm xong)
-                Form_Meter_devices meterForm = new Form_Meter_devices();
-
-                this.Hide();
-                meterForm.ShowDialog();
-                this.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi mở Form Meter: " + ex.Message);
-                this.Show();
-            }
+            // Gọi hàm mở thông minh cho Form Meter
+            OpenFormOfType<Form_Meter_devices>();
         }
     }
 }
